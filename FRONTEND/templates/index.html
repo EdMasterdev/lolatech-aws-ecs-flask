@@ -1,15 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="p-5 mb-4 bg-white rounded-3 shadow-sm">
+<div class="p-5 mb-4 bg-light rounded-3 border">
     <div class="container-fluid py-5">
-        <h1 class="display-5 fw-bold">Welcome to AWS Project</h1>
-        <p class="col-md-8 fs-4">This is a simple Flask application demonstrating a microservices architecture with a separate Frontend and Backend connected to a MySQL database.</p>
+        <h1 class="display-5 fw-bold">LolaTech</h1>
+        <h2 class="fs-4 text-muted mb-4">Sistema de Inventario</h2>
+        <p class="col-md-8 fs-4">Bienvenido a LolaTech, su socio estratégico en soluciones tecnológicas. Gestionamos su
+            inventario de manera eficiente, segura y escalable.</p>
+        <hr class="my-4">
+        <p>Utilice las herramientas a continuación para administrar sus recursos.</p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-            <a href="{{ url_for('users') }}" class="btn btn-primary btn-lg px-4 me-md-2">Manage Users</a>
-            <a href="{{ url_for('products') }}" class="btn btn-outline-secondary btn-lg px-4">Manage Products</a>
-        </div>
-    </div>
-</div>
-{% endblock %}
-
