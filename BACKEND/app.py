@@ -2,14 +2,18 @@ import os
 from flask import Flask, request, jsonify
 import mysql.connector
 from mysql.connector import Error
+from dotenv import load_dotenv
+
+# Cargar variables de entorno
+load_dotenv()
 
 app = Flask(__name__)
 
-# Config desde variables de entorno (pon las de tu RDS)
-DB_HOST = os.getenv("DB_HOST", "testbdintancia1.cgl84qec82qv.us-east-1.rds.amazonaws.com")
+# Config desde variables de entorno
+DB_HOST = os.getenv("DB_HOST", "localhost")
 DB_PORT = int(os.getenv("DB_PORT", 3306))
-DB_USER = os.getenv("DB_USER", "admin")
-DB_PASS = os.getenv("DB_PASS", "123456789aA")
+DB_USER = os.getenv("DB_USER", "root")
+DB_PASS = os.getenv("DB_PASS", "")
 DB_NAME = os.getenv("DB_NAME", "ejemplotest")
 
 def get_connection():
